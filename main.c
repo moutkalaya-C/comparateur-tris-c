@@ -4,7 +4,7 @@
 
 #define TAILLE 10000
 
-// Tri à bulles (lent sur de grands tableaux)
+// Tri à bulles
 void triBulles(int arr[], int n) {
     int i, j, temp;
     for (i = 0; i < n - 1; i++) {
@@ -18,7 +18,7 @@ void triBulles(int arr[], int n) {
     }
 }
 
-// Tri par insertion (plus efficace pour des données partiellement triées)
+// Tri par insertion 
 void triInsertion(int arr[], int n) {
     int i, key, j;
     for (i = 1; i < n; i++) {
@@ -58,21 +58,21 @@ int main() {
 
     printf("=== COMPARATEUR DE PERFORMANCES DE TRIS (%d elements) ===\n\n", TAILLE);
 
-    // Test du Tri à Bulles
+   
     clock_t debut = clock();
     triBulles(tab1, TAILLE);
     clock_t fin = clock();
     double tempsBulles = (double)(fin - debut) / CLOCKS_PER_SEC;
     printf("1. Tri a bulles     : %.4f secondes\n", tempsBulles);
 
-    // Test du Tri par Insertion
+    
     debut = clock();
     triInsertion(tab2, TAILLE);
     fin = clock();
     double tempsInsertion = (double)(fin - debut) / CLOCKS_PER_SEC;
     printf("2. Tri par insertion : %.4f secondes\n", tempsInsertion);
 
-    // Libération de la mémoire
+   
     free(tab1);
     free(tab2);
 
