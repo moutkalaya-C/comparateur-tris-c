@@ -12,7 +12,3 @@ Programme en langage C conçu pour évaluer et comparer l'efficacité de deux al
 - Exécution et chronométrage comparatif des deux méthodes de tri.
 - Affichage des performances en secondes pour illustrer la complexité algorithmique.
 
-## Compilation et exécution
-```bash
-gcc main.c -o comparateur_tris
-./comparateur_tris
